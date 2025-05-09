@@ -1,0 +1,91 @@
+/* src/index.css */
+
+/* Color variables */
+:root {
+  --wine-dark:   #5B122E;
+  --wine-medium: #7D295A;
+  --wine-light:  #C08081;
+  --text-light:  #FFFFFF;
+  --bg-page:     #F5F5F5;
+}
+
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styling */
+body {
+  font-family: 'Century Gothic', Futura, sans-serif;
+  background-color: var(--bg-page);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Game container layout */
+.game {
+  display: flex;
+  flex-wrap: wrap;           /* allow wrapping on small screens */
+  justify-content: center;   /* center board and info panel */
+  align-items: center;
+  gap: min(5vmin, 40px);     /* fluid gap up to 40px */
+  padding: min(5vmin, 20px); /* fluid padding up to 20px */
+}
+
+/* Game info panel */
+.game-info {
+  color: var(--wine-dark);
+  font-size: min(4vmin, 24px);
+  text-align: center;
+}
+
+.game-info > div {
+  margin-bottom: min(2vmin, 20px);
+}
+
+/* Board styling */
+.board {
+  width: min(90vmin, 500px);    /* max 90% of smaller viewport dimension, up to 500px */
+  aspect-ratio: 1;              /* keep the board square */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;          /* each row same size as columns */
+  gap: min(2vmin, 20px);        /* fluid gaps up to 20px */
+  
+  background-color: var(--wine-dark);
+  padding: min(3vmin, 12px);
+  border: min(0.8vmin, 3px) solid var(--wine-medium);
+  border-radius: min(2vmin, 8px);
+}
+
+/* Each square */
+.square {
+  width: 100%;
+  aspect-ratio: 1;              /* keep each cell square */
+  font-size: min(8vmin, 48px);  /* fluid font up to 48px */
+  font-weight: bold;
+  color: var(--text-light);
+  background-color: var(--wine-light);
+  border: min(0.4vmin, 2px) solid var(--wine-medium);
+  border-radius: min(2vmin, 8px);
+
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+
+  transition: background-color 0.2s ease;
+}
+
+.square:hover {
+  background-color: #A25F6D;     /* darker wine shade on hover */
+}
+
+.square:active {
+  background-color: #8B3A50;     /* darkest wine shade on click */
+}

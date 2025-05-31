@@ -2,10 +2,6 @@
 
 A modern take on the classic 3 × 3 Tic Tac Toe built with **React 19**, sporting a responsive layout and a sleek wine‑themed colour palette. Perfect for learning component composition, hooks, and immutable state management – or just for a quick match against a friend!
 
-<p align="center">
-  <a href="https://aramyst.github.io/TicTacToeGame/" target="_blank"><img src="docs/screenshot.png" alt="Screenshot of the React Tic Tac Toe game" width="680"></a>
-</p>
-
 > **Live demo →** [https://aramyst.github.io/TicTacToeGame/](https://aramyst.github.io/TicTacToeGame/)
 
 ---
